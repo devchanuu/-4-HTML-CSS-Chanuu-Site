@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CHANUU</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <main class="hero">
+
+    <!-- Decorative orange curves -->
+    <svg class="orange-curves"
+         viewBox="0 0 1200 730"
+         preserveAspectRatio="none"
+         aria-hidden="true">
+
+      <path
+        d="M -100 40 C 40 260, 120 400, 300 500
+           S 680 680, 850 510
+           S 1050 290, 1200 430"
+        fill="none"
+        stroke="#ff7900"
+        stroke-width="58"
+        stroke-linecap="round"
+      />
+
+      <path
+        d="M 560 780 C 480 620, 560 490, 730 400
+           S 1000 300, 1080 420
+           S 1080 600, 1200 680"
+        fill="none"
+        stroke="#ff9b72"
+        stroke-width="38"
+        stroke-linecap="round"
+      />
+    </svg>
+
+    <!-- Navigation bar -->
+    <header class="navbar">
+
+      <a href="#" class="logo"> CHANUU</a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">ABOUT</a>
+        <a href="#services">SERVICES</a>
+        <a href="#news">NEWS</a>
+        <a href="#blog">BLOG</a>
+        <a href="#careers">RESOURCES</a>
+      </nav>
+
+      <a href="#contact" class="contact-button">
+        GET STARTED
+      </a>
+
+      <button class="menu-toggle"
+              aria-label="Open navigation"
+              aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </header>
+
+    <!-- Left illustration -->
+    <img
+      src="pic1.png"
+      alt="Person using a smartphone"
+      class="person person-left"
+    >
+
+    <!-- Main heading -->
+    <section class="hero-content" id="about">
+      <h1>JUST A WEIRDO !!</h1>
+
+      <p class="subtitle">
+        <span class="subtitle-icon">↗</span>
+        EXPLORE ME
+      </p>
+    </section>
+
+    <!-- Right illustration -->
+    <img
+      src="pic2.png"
+      alt="Person working on a laptop"
+      class="person person-right"
+    >
+
+    <!-- Bottom navigation -->
+    <div class="slide-indicator">
+      <span class="indicator-circle"></span>
+      <span>1</span>
+      <span class="indicator-divider">|</span>
+      <span>2</span>
+    </div>
+
+    <a href="#about" class="skip-button">
+      <span class="skip-dot"></span>
+      CONTACT
+    </a>
+
+  </main>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('active');
+
+      menuToggle.setAttribute('aria-expanded', isOpen);
+    });
+  </script>
+
+</body>
+</html>
+
